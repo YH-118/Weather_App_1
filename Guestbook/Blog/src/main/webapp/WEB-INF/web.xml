@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+  <welcome-file-list>
+    <welcome-file>landing.jsp</welcome-file>
+  </welcome-file-list>
+
+  <servlet>
+    	<servlet-name>newPostForm</servlet-name>
+    	<jsp-file>/newPost.jsp</jsp-file>
+  </servlet> 
+
+  <servlet>
+     	<servlet-name>PostServlet</servlet-name>
+     	<servlet-class>blog.PostServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+     	<servlet-name>ActivateSubscribeServlet</servlet-name>
+     	<servlet-class>blog.ActivateSubscribeServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+     	<servlet-name>SubscribeCronServlet</servlet-name>
+     	<servlet-class>blog.SubscribeCronServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+     	<servlet-name>UnactivateSubscribeServlet</servlet-name>
+     	<servlet-class>blog.UnactivateSubscribeServlet</servlet-class>
+  </servlet> 
+
+  <servlet>
+     	<servlet-name>postDetail</servlet-name>
+     	<jsp-file>/postDetail.jsp</jsp-file>
+  </servlet> 
+
+  <servlet-mapping>
+  		<servlet-name>newPostForm</servlet-name>
+  		<url-pattern>/posts/new</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+  		<servlet-name>PostServlet</servlet-name>
+  		<url-pattern>/posts</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+  		<servlet-name>ActivateSubscribeServlet</servlet-name>
+  		<url-pattern>/subscribe</url-pattern>
+  </servlet-mapping> 
+
+  <servlet-mapping>
+  		<servlet-name>SubscribeCronServlet</servlet-name>
+  		<url-pattern>/subscribe/cron</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+  		<servlet-name>UnactivateSubscribeServlet</servlet-name>
+  		<url-pattern>/unsubscribe</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+  		<servlet-name>postDetail</servlet-name>
+  		<url-pattern>/posts/*</url-pattern>
+  </servlet-mapping> 
+ 
+
+  <filter>
+        <filter-name>ObjectifyFilter</filter-name>
+        <filter-class>com.googlecode.objectify.ObjectifyFilter</filter-class>
+  </filter>
+	
+  <filter-mapping>
+		<filter-name>ObjectifyFilter</filter-name>	
+	    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+</web-app>

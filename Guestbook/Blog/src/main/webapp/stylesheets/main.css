@@ -1,0 +1,28 @@
+
+
+ body {
+   font-family: Verdana, Helvetica, sans-serif;
+   background-color: #FFFFCC;
+}
+
+.image
+{
+	width: 1000;
+	height: 400;
+	text-align: center;
+}
+
+.button {
+
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #3874ac;
+  font-size: 14px;
+  margin: 1px 1px;
+  cursor: pointer;
+}
+

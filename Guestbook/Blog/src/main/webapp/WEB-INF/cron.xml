@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<cronentries>
+		<cron>
+			<url>/subscribe/cron</url>
+			<description>User could subscribe. Every day at 5pm Central Time, subscribed user will receive a digest of any new posts in the last 24 hours to all.</description>
+			<schedule>every day 23:00</schedule>
+		</cron>
+	</cronentries> 
